@@ -107,7 +107,7 @@ This homework is graded based on the following criteria:
 
 
 ## Review
-
+![]()
 You are required to submit the following for review:
 
 * A walkthrough video demonstrating the functionality of the application.
