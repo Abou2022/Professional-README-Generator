@@ -1,5 +1,5 @@
 
-#  Professional README Generator ![License:](https://img.shields.io/badge/License-MIT-yellow.svg)
+#  Employer Tracker ![License:](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
     ## Table of Contents:
@@ -15,19 +15,19 @@
     9. Eamil
 
  ## Description 
-this application would help you to generate an automatic README for any of you software assiggnments
+This application accepte user input. When you start the application, you are the following option : View all departments, view all roles, view all employees, add department, role, an employee and update an employee role. If choose all department, you able to see all department. When you choose to view all roles, THEN you have presented with the job title, role id, the department that role belongs to, and the salary for that role. If you choose to view all employees, then you have presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to. You can also add department, role, employee. You can also update an role.
 
 ## Installation 
-To run the program, use the command npm i or npm install -y to install all dependencies.
+To run the program, use the command mysql to run schema, run SOURCE seeds.sql, SOURCE querly.sql and finaly run the    server node server.js to install all dependencies.
 
  ## Usage 
- Node.js the inquirer package 
+ To run this application yoiu need to run npm i to install all dependencies
 
 ## Contibution
-for any contribution you can email me
+NA
 
  ## Test
-npm test
+This application doesn't have the test
 
 ## License
 MIT License
@@ -46,5 +46,5 @@ undefined
 
 ## Email
 For any question, you can eamil at : 
-[email](mailto:syllabakary@gamil.com)
+[email](mailto:syllabakary2002@gmail.com)
     

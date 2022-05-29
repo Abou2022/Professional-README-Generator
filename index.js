@@ -1,70 +1,69 @@
+const inquirer = require("inquirer");
+const fs = require("fs");
 
-  const inquirer = require("inquirer");
-  const fs = require("fs");
-  
-  
-  function prompt() {
-    return inquirer.prompt([
-      {
-        type: "input",
-        name: "title",
-        message: "What is your project title?",
-      },
-      {
-        type: "input",
-        name: "description",
-        message: "What is the describtion of your project?",
-      },
-      {
-        type: "input",
-        name: "installation",
-        message: "What command should be run to install dependencies? ",
-      },
-      {
-        type: "input",
-        name: "usage",
-        message: "How to use the application?",
-      },
-      {
-        type: "input",
-        name: "contribution",
-        message: "What is the contribution guidelines?",
-      },
-      {
-        type: "input",
-        name: "test",
-        message: "What command should be used to run the test?",
-      },
-      {
-        type: "input",
-        name: "license",
-        message: "What is the license ? (i.e ... MIT, GNU LGPLv3, Apache License 2.0)",
-      },
-      {
-        type: "input",
-        name: "github",
-        message: "What is your gitub userName?",
-      },
-      {
-        type: "input",
-        name: "email",
-        message: "This is my email addrress if you want to conatct you",
-      },
-    ]);
-  }
-  function generateREADME({
-    title,
-    description,
-    installation,
-    usage,
-    contribution,
-    test,
-    license,
-    github,
-    question,
-    email,
-  }) {
-    let ReadMe = `
+function prompt() {
+  return inquirer.prompt([
+    {
+      type: "input",
+      name: "title",
+      message: "What is your project title?",
+    },
+    {
+      type: "input",
+      name: "description",
+      message: "What is the describtion of your project?",
+    },
+    {
+      type: "input",
+      name: "installation",
+      message: "What command should be run to install dependencies? ",
+    },
+    {
+      type: "input",
+      name: "usage",
+      message: "How to use the application?",
+    },
+    {
+      type: "input",
+      name: "contribution",
+      message: "What is the contribution guidelines?",
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "What command should be used to run the test?",
+    },
+    {
+      type: "input",
+      name: "license",
+      message:
+        "What is the license ? (i.e ... MIT, GNU LGPLv3, Apache License 2.0)",
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "What is your gitub userName?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "This is my email addrress if you want to conatct you",
+    },
+  ]);
+}
+function generateREADME({
+  title,
+  description,
+  installation,
+  usage,
+  contribution,
+  test,
+  license,
+  github,
+  question,
+  email,
+}) {
+  let ReadMe = `
 #  ${title} ![License:](https://img.shields.io/badge/License-${license}-yellow.svg)
 
 
@@ -77,8 +76,8 @@
     5. Test
     6. License
     7. Github
-    8.Question
-    9. Eamil
+    8. Question
+    9. Email
 
  ## Description 
 ${description}
@@ -114,17 +113,17 @@ ${question}
 For any question, you can eamil at : 
 [email](mailto:${email})
     `;
-  
-    return ReadMe;
-  }
-  
-  function WriteReadmeFile(ReadMe) {
-    fs.writeFileSync(`./Readme/readme.md`, ReadMe);
-  }
-  async function init() {
-    let answers = await prompt();
-    let genREADME = generateREADME(answers);
-    WriteReadmeFile(genREADME);
-  }
-  
-  init();
+
+  return ReadMe;
+}
+
+function WriteReadmeFile(ReadMe) {
+  fs.writeFileSync(`./Readme/readme.md`, ReadMe);
+}
+async function init() {
+  let answers = await prompt();
+  let genREADME = generateREADME(answers);
+  WriteReadmeFile(genREADME);
+}
+
+init();
